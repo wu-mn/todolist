@@ -1,3 +1,3 @@
 # todolist
 
-ブラウザーでhtml/todolist.html を開ける
+ブラウザーでhtml/todolist.html を開く
