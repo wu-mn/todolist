@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo2</title>
+    <link rel="stylesheet" href="../css/sanitize.css">
+    <link rel="stylesheet" href="../css/todocss.css">
+</head>
+
+<body>
+    <div class="continer">
+        <h1>今日やること</h1>
+        <div>
+            <input type="text" id="todothing" name="todothing">
+            <button type="submit" class="btn-add" id="add" disabled="disable">add</button>
+        </div>
+        <div class="todolist">
+            <div id="list">
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/addTask.js"></script>
+    <script src="../js/deleteTask.js"></script>
+    <script src="../js/editTask.js"></script>
+    <script src="../js/btnSet.js"></script>
+    <script>
+        //ボタンを押すと、発火
+        document.getElementById("todothing").addEventListener('change',buttonOn);
+        function buttonOn() {
+            var todotext = document.getElementById("todothing").value;
+            if (todotext == '' || todotext == undefined || todotext == null) {
+
+            } else {
+                document.getElementById("add").removeAttribute("disabled");
+                document.getElementById("add").addEventListener('click', addNewTask);
+            }
+        }
+    </script>

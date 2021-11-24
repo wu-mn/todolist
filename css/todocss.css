@@ -1,0 +1,66 @@
+.continer {
+    width: 600px;
+    margin: 10px auto;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid beige;
+    padding: 30px;
+    box-shadow: 3px 2px 3px gray;
+}
+
+ul li {
+    list-style-type:none;
+}
+
+h1 {
+    background-color: cadetblue;
+    color:white;
+    padding: 6px;
+    width: 500px;
+    margin: auto;
+    padding-bottom: 0;
+}
+input {
+    width: 500px;
+    padding: 10px;
+    margin: 15px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.btn-add {
+    width: 500px;
+    padding: 10px;
+    font-size: 15px;
+    background-color: paleturquoise;
+}
+.btn-d {
+    float:right;
+    background-color: palevioletred;
+    color: white;
+    border-style: none;
+}
+.btn-s {
+    float:right;
+    background-color:green;
+    color: white;
+    border-style: none;
+}
+.btn-c {
+    float:right;
+    background-color:blue;
+    color: white;
+    border-style: none;
+}
+.todotag {
+    width: 500px;
+    border: 1px solid gray;
+    padding: 6px;
+    margin: auto;
+
+}
+.list {
+    text-align: center;
+}
+.subinput {
+    width: 400px;
+}
