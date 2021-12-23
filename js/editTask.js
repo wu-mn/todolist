@@ -6,6 +6,8 @@ function createEditTaskBtn() {
   return btn;
 }
 function EditTask() {
+  var e = window.event || arguments.callee.caller.arguments[0]
+  e.stopPropagation();
   var txt;
   var newtask = prompt("編集内容は：", "");
   if (newtask == null || newtask == "") {

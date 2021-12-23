@@ -7,4 +7,6 @@ function creatDeleteBtn() {
 }
 function deleteTask() {
   this.parentElement.parentElement.remove();
+  var e = window.event || arguments.callee.caller.arguments[0]
+  e.stopPropagation();
 }

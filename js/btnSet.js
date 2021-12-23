@@ -7,7 +7,6 @@ function createBtnSet() {
   deleteB = creatDeleteBtn();
   subaddB = createaddNewSubTaskBtn();
   EditB = createEditTaskBtn();
-
   btnDiv.append(deleteB);
   btnDiv.append(subaddB);
   btnDiv.append(EditB);

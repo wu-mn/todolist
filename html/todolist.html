@@ -21,10 +21,17 @@
             </div>
         </div>
     </div>
+    <div class="memo">
+        メモ
+        <div id="memo">
+
+        </div>
+    </div>
     <script src="../js/addTask.js"></script>
     <script src="../js/deleteTask.js"></script>
     <script src="../js/editTask.js"></script>
     <script src="../js/btnSet.js"></script>
+    <script src="../js/addmemo.js"></script>
     <script>
         //ボタンを押すと、発火
         document.getElementById("todothing").addEventListener('change',buttonOn);
@@ -37,4 +44,6 @@
                 document.getElementById("add").addEventListener('click', addNewTask);
             }
         }
+
+        localStorage.clear();
     </script>
