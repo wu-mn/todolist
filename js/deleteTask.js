@@ -9,4 +9,8 @@ function deleteTask() {
   this.parentElement.parentElement.remove();
   var e = window.event || arguments.callee.caller.arguments[0]
   e.stopPropagation();
+  localStorage.removeItem(target.getAttribute('id'));
+  localStorage.removeItem(target.getAttribute('id') + "time");
+  document.getElementById("saveTime").innerHTML = "";
+  document.getElementById("memo").innerHTML = "";
 }

@@ -23,6 +23,8 @@
     </div>
     <div class="memo">
         メモ
+        <div id="time"></div>
+        <div id="saveTime"></div>
         <div id="memo">
 
         </div>
@@ -37,13 +39,20 @@
         document.getElementById("todothing").addEventListener('change',buttonOn);
         function buttonOn() {
             var todotext = document.getElementById("todothing").value;
-            if (todotext == '' || todotext == undefined || todotext == null) {
+            document.getElementById("add").removeAttribute("disabled");
+            document.getElementById("add").addEventListener('click', addNewTask);
+            // if (todotext == '' || todotext == undefined || todotext == null) {
+            //     document.getElementById("add").disabled = ture;
+            // } else {
 
-            } else {
-                document.getElementById("add").removeAttribute("disabled");
-                document.getElementById("add").addEventListener('click', addNewTask);
-            }
+            // }
+
         }
-
+            time();
+            function time() {
+                var now = new Date();
+                document.getElementById("time").innerHTML = "現在は" + now.toLocaleTimeString();
+            }
+            setInterval('time()', 1000);
         localStorage.clear();
     </script>

@@ -6,12 +6,18 @@ function checkMemo() {
   var key = target.getAttribute('id');
   if (r == true) {
     var value1 = localStorage.getItem(key);
-    console.log(value1);
+    var value2 = localStorage.getItem(key + "time");
     document.getElementById("memo").innerHTML = value1;
+    if (document.getElementById("saveTime").value == null) {
+      document.getElementById("saveTime").setAttribute("display", "none")
+    } else {
+      document.getElementById("saveTime").innerHTML = "記入時間は" + value2;
+    }
   }
   else {
     addmemo();
   }
+
 }
 
 function addmemo() {
@@ -20,11 +26,13 @@ function addmemo() {
   var key = target.getAttribute('id');
   var newtask = prompt("メモ内容は：", "");
   if (newtask == null || newtask == "") {
-    // txt = "";
+    document.getElementById("saveTime").setAttribute("display","none")
   } else {
     document.getElementById("memo").innerHTML = newtask;
     localStorage.setItem(key, newtask);
-
+    var now = new Date();
+    localStorage.setItem(key + "time", now.toLocaleString());
+    document.getElementById("saveTime").innerHTML = "記入時間は"+ localStorage.getItem(key + "time");
 
   }
 }
